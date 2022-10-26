@@ -1,0 +1,394 @@
+:root {
+    --ecriture: black;
+    --fond: url(../image/imagetexturecubique-modified.jpg);
+    --background: whitesmoke;
+    --ecrituregrise: #E6E6E6;
+
+}
+
+/*PARAGRAPHE*/
+
+p {
+    text-align: justify;
+}
+
+/*CORPS*/
+
+body {
+    margin: 25px;
+    padding: 25px;
+    color: var(--ecriture);
+    background: var(--fond);
+    font-size: 20px;
+    transition: ease-in 0.4s;
+    display:block;
+}
+
+/*DARK MODE*/
+
+.dark-mode {
+    background-image: var(--fond);
+    width:100%;
+    color: var(--ecriture);
+    transition: ease-in 0.4s;
+
+}
+
+.light-mode {
+    background-image: var(--fond);
+    width:100%;
+    color: var(--ecriture);
+    transition: ease-in 0.4s;
+}
+
+
+/*CARD*/
+
+.card-body {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--ecriture);
+    background-color: var(--background);
+    transition: ease-in 0.4s;
+}
+
+.card{
+    color: var(--ecriture);
+    background-color: var(--background);
+    transition: ease-in 0.4s;
+    border-radius: 20px;
+}
+
+.card-header {
+    padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+    margin-bottom: 0;
+    color: var(--ecriture);
+    background-color: var(--background);
+    border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    transition: ease-in 0.4s;
+}
+
+/*TITRE 1*/
+
+h1 {
+    font-size:57px;
+}
+
+h1 span{
+    color:#494949;
+
+}
+
+/*TITRE 2*/
+
+/*TITRE 3*/
+
+h3 span {
+    font-size: 150%;
+}
+
+/*TITRE 4*/
+
+h4 {
+    text-align: center;
+}
+/*TITRE 5*/
+
+h5 span{
+    font-weight: bold;
+    color : #8b8b8b;
+}
+
+/*TITRE 6*/
+
+/*LISTE PUCE*/
+
+.losange {
+    list-style-type: "♦"; /*change le style de la puce*/
+    color: black;
+    width: fit-content;
+}
+
+.losange:hover {
+    color: #fff;
+    box-sizing: content-box;
+    border-radius: 5px;
+    width: fit-content;
+    box-shadow:     0 0 7px #fff, 
+                    0 0 10px #fff, 
+                    0 0 42px rgb(108, 8, 202),   
+                    0 0 77px rgb(108, 8, 202), 
+                    0 0 100px rgb(108, 8, 202); 
+}
+
+/*MODIFICATION TEXTE:*/
+
+/*-SOULIGNE*/
+
+.souligné {
+    text-decoration: underline;
+}
+
+/*-TAILLE DU TEXTE*/
+
+.textgras {
+    font-weight: 700;
+}
+
+/*-OMBRE*/
+
+.shadow {
+    text-shadow: whitesmoke 0px 0px 2px, rgb(233, 231, 231) 0px 0px 5px;
+    color: rgb(247, 244, 244);
+    background: #333333;
+}
+
+/*MODIFICATION IMAGE:*/
+
+
+/*-CENTRAGE*/
+
+.portrait {
+    text-align: center;
+}
+
+/*-TAILLE ET ARRONDI*/
+
+.portrait img {
+    width: auto;
+    border-radius: 50px; /*Arrondi l'image*/
+}
+
+/*COULEURS:*/
+
+/*-BLANC*/
+
+.colorwhite{
+    color:white;
+}
+
+/*-VIOLET*/
+
+.colorpurple {
+    color: rgb(108, 8, 202);
+}
+
+.colorpurple1 {
+    color:rgb(108, 8, 202);
+}
+
+.colorpurple1-1{
+    color: rgb(72, 0, 139);
+}
+
+.colorpurple1-2{
+    color: rgb(158, 58, 252);
+}
+
+
+/*-GRIS*/
+
+.colorgray1-2 {
+    color:#b8b8b8;
+}
+
+.colorgray1-1 {
+    color:#313131;
+}
+
+.couleurgrise {
+    color: var(--ecrituregrise);
+}
+
+/*-NOIR*/
+
+.colorblack{
+    color:black;
+}
+
+
+/*-ROUGE*/
+
+footer h4 {
+    color : rgb(105, 27, 158);
+}
+  
+
+
+
+/* LEFT COLUMN */
+.left-column{
+    background-color: rgb(122, 124, 240);
+}
+
+/* RIGHT COLUMN */
+.right-column{
+    background-color: rgb(160, 92, 223);
+}
+
+
+/* DEBUT BOUTON DARK MODE*/
+
+input[type="checkbox"]
+{
+    --webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+
+.check
+{
+    position: relative;
+    display: block;
+    top: 10px;
+    width: 40px;
+    height: 20px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .check
+{
+    background: #092c3e;
+}
+
+.check:before
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius:  50%;
+    transition: 0.5s;
+}
+input[type="checkbox"]:checked ~ .check:before
+{
+    transform: translateX(+20px);
+    
+}
+.check:after
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #092c3e;
+    width: 16px;
+    height: 16px;
+    border-radius:  50%;
+    transition: 0.5s;
+    transform: translateX(-20px);
+}
+
+input[type="checkbox"]:checked ~ .check:after
+{
+    transform: translateX(0px);
+    background: #fff;
+}
+
+progress::-webkit-progress-value {
+    transition : width 5s ease;;
+}
+
+/*FIN BOUTON DARK MODE*/
+
+/*DEBUT NAVBAR*/
+
+.navbar {
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 0.5rem;
+    --bs-navbar-color: var(--ecriture);
+    
+    --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
+    --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
+    --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
+    --bs-navbar-brand-padding-y: 0.3125rem;
+    --bs-navbar-brand-margin-end: 1rem;
+    --bs-navbar-brand-font-size: 1.25rem;
+    --bs-navbar-brand-color: rgba(0, 0, 0, 0.9);
+    --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
+    --bs-navbar-nav-link-padding-x: 0.5rem;
+    --bs-navbar-toggler-padding-y: 0.25rem;
+    --bs-navbar-toggler-padding-x: 0.75rem;
+    --bs-navbar-toggler-font-size: 1.25rem;
+    --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+    --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0.1);
+    --bs-navbar-toggler-border-radius: 0.375rem;
+    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+    background-color: var(--background);
+}
+
+
+
+.navbar {
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 0.5rem;
+    --bs-navbar-color: whitesmoke;
+    --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
+    --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
+    --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
+    --bs-navbar-brand-padding-y: 0.3125rem;
+    --bs-navbar-brand-margin-end: 1rem;
+    --bs-navbar-brand-font-size: 1.25rem;
+    --bs-navbar-brand-color: rgba(0, 0, 0, 0.9);
+    --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
+    --bs-navbar-nav-link-padding-x: 0.5rem;
+    --bs-navbar-toggler-padding-y: 0.25rem;
+    --bs-navbar-toggler-padding-x: 0.75rem;
+    --bs-navbar-toggler-font-size: 1.25rem;
+    --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+    --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0.1);
+    --bs-navbar-toggler-border-radius: 0.375rem;
+    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+}
+
+
+/*BOUTON PERSONNE*/
+input, textarea {
+    box-sizing: border-box;
+    border:  rgb(105, 27, 158)solid 2px;
+    border-radius: 20px;
+    color: rgb(105, 27, 158);
+    font-size: 20px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 5px 5px 5px 5px;
+    resize: none;
+  }
+
+  /*LABEL*/
+
+label{
+    text-align: center;
+}
+
+#post{
+    text-align: center;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+#marge{
+    margin: 10px;
+}
